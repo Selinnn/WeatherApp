@@ -19,12 +19,22 @@ class ApiKeyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.isHidden = true
     }
     
-    @IBAction func enter(_ sender: Any) {
-        
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+        apiTextField.text = ""
     }
     
+    @IBAction func enterBtnClick(_ sender: Any) {
+        if let text = apiTextField.text, !text.isEmpty {
+          if let vc = self.storyboard?.instantiateViewController(identifier: "WeatherViewContoller") as? WeatherViewController {
+            vc.apiKey = text
+            navigationController?.pushViewController(vc, animated: true)
+            }
+            
+        }
+    }
 
 }

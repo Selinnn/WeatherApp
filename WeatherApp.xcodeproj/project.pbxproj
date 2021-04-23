@@ -11,8 +11,20 @@
 		B537DC852632D90C003D1E8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B537DC832632D90C003D1E8B /* Main.storyboard */; };
 		B537DC872632D90E003D1E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B537DC862632D90E003D1E8B /* Assets.xcassets */; };
 		B537DC8A2632D90E003D1E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B537DC882632D90E003D1E8B /* LaunchScreen.storyboard */; };
+		B554611E2633157900AC8D9D /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F4642632E78C000E04A1 /* Lato-Black.ttf */; };
+		B55461202633157C00AC8D9D /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F45C2632E78B000E04A1 /* Lato-Bold.ttf */; };
+		B55461222633157E00AC8D9D /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F45D2632E78B000E04A1 /* Lato-Hairline.ttf */; };
+		B55461242633158200AC8D9D /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F4602632E78B000E04A1 /* Lato-Heavy.ttf */; };
+		B55461262633158400AC8D9D /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F4662632E78C000E04A1 /* Lato-Light.ttf */; };
+		B55461282633158700AC8D9D /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F45E2632E78B000E04A1 /* Lato-Medium.ttf */; };
+		B554612A2633158900AC8D9D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F4692632E78C000E04A1 /* Lato-Regular.ttf */; };
+		B554612C2633158B00AC8D9D /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F46A2632E78C000E04A1 /* Lato-Semibold.ttf */; };
+		B554612E2633158E00AC8D9D /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F45A2632E78B000E04A1 /* Lato-Thin.ttf */; };
+		B5546133263318CB00AC8D9D /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546131263318CB00AC8D9D /* WeatherCell.swift */; };
+		B5546134263318CB00AC8D9D /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5546132263318CB00AC8D9D /* WeatherCell.xib */; };
 		B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */; };
 		B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4742632E9F2000E04A1 /* Extensions.swift */; };
+		B5B5F4792632F049000E04A1 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4782632F049000E04A1 /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,8 @@
 		B537DC862632D90E003D1E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B537DC892632D90E003D1E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B537DC8B2632D90E003D1E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5546131263318CB00AC8D9D /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		B5546132263318CB00AC8D9D /* WeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
 		B5B5F45A2632E78B000E04A1 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		B5B5F45C2632E78B000E04A1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		B5B5F45D2632E78B000E04A1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
@@ -33,6 +47,7 @@
 		B5B5F46A2632E78C000E04A1 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeyViewController.swift; sourceTree = "<group>"; };
 		B5B5F4742632E9F2000E04A1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B5B5F4782632F049000E04A1 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +80,26 @@
 		B537DC7C2632D90C003D1E8B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5546130263318AD00AC8D9D /* View */,
 				B5B5F46F2632E8FC000E04A1 /* Controller */,
 				B5B5F4592632E770000E04A1 /* TextFont */,
 				B537DC7D2632D90C003D1E8B /* AppDelegate.swift */,
+				B5B5F4742632E9F2000E04A1 /* Extensions.swift */,
 				B537DC832632D90C003D1E8B /* Main.storyboard */,
 				B537DC862632D90E003D1E8B /* Assets.xcassets */,
 				B537DC882632D90E003D1E8B /* LaunchScreen.storyboard */,
 				B537DC8B2632D90E003D1E8B /* Info.plist */,
-				B5B5F4742632E9F2000E04A1 /* Extensions.swift */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		B5546130263318AD00AC8D9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5546131263318CB00AC8D9D /* WeatherCell.swift */,
+				B5546132263318CB00AC8D9D /* WeatherCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5B5F4592632E770000E04A1 /* TextFont */ = {
@@ -97,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */,
+				B5B5F4782632F049000E04A1 /* WeatherViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,9 +184,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55461242633158200AC8D9D /* Lato-Heavy.ttf in Resources */,
+				B554612E2633158E00AC8D9D /* Lato-Thin.ttf in Resources */,
+				B554611E2633157900AC8D9D /* Lato-Black.ttf in Resources */,
+				B5546134263318CB00AC8D9D /* WeatherCell.xib in Resources */,
+				B554612C2633158B00AC8D9D /* Lato-Semibold.ttf in Resources */,
+				B55461202633157C00AC8D9D /* Lato-Bold.ttf in Resources */,
+				B55461222633157E00AC8D9D /* Lato-Hairline.ttf in Resources */,
+				B55461282633158700AC8D9D /* Lato-Medium.ttf in Resources */,
 				B537DC8A2632D90E003D1E8B /* LaunchScreen.storyboard in Resources */,
 				B537DC872632D90E003D1E8B /* Assets.xcassets in Resources */,
+				B554612A2633158900AC8D9D /* Lato-Regular.ttf in Resources */,
 				B537DC852632D90C003D1E8B /* Main.storyboard in Resources */,
+				B55461262633158400AC8D9D /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B537DC7E2632D90C003D1E8B /* AppDelegate.swift in Sources */,
+				B5B5F4792632F049000E04A1 /* WeatherViewController.swift in Sources */,
+				B5546133263318CB00AC8D9D /* WeatherCell.swift in Sources */,
 				B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */,
 				B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */,
 			);
