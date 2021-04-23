@@ -8,22 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		B537DC7E2632D90C003D1E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537DC7D2632D90C003D1E8B /* AppDelegate.swift */; };
-		B537DC802632D90C003D1E8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537DC7F2632D90C003D1E8B /* SceneDelegate.swift */; };
-		B537DC822632D90C003D1E8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537DC812632D90C003D1E8B /* ViewController.swift */; };
 		B537DC852632D90C003D1E8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B537DC832632D90C003D1E8B /* Main.storyboard */; };
 		B537DC872632D90E003D1E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B537DC862632D90E003D1E8B /* Assets.xcassets */; };
 		B537DC8A2632D90E003D1E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B537DC882632D90E003D1E8B /* LaunchScreen.storyboard */; };
+		B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */; };
+		B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4742632E9F2000E04A1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B537DC7A2632D90C003D1E8B /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B537DC7D2632D90C003D1E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B537DC7F2632D90C003D1E8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B537DC812632D90C003D1E8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B537DC842632D90C003D1E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B537DC862632D90E003D1E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B537DC892632D90E003D1E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B537DC8B2632D90E003D1E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5B5F45A2632E78B000E04A1 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		B5B5F45C2632E78B000E04A1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		B5B5F45D2632E78B000E04A1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		B5B5F45E2632E78B000E04A1 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		B5B5F4602632E78B000E04A1 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		B5B5F4642632E78C000E04A1 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		B5B5F4662632E78C000E04A1 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		B5B5F4692632E78C000E04A1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		B5B5F46A2632E78C000E04A1 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeyViewController.swift; sourceTree = "<group>"; };
+		B5B5F4742632E9F2000E04A1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +65,40 @@
 		B537DC7C2632D90C003D1E8B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5B5F46F2632E8FC000E04A1 /* Controller */,
+				B5B5F4592632E770000E04A1 /* TextFont */,
 				B537DC7D2632D90C003D1E8B /* AppDelegate.swift */,
-				B537DC7F2632D90C003D1E8B /* SceneDelegate.swift */,
-				B537DC812632D90C003D1E8B /* ViewController.swift */,
 				B537DC832632D90C003D1E8B /* Main.storyboard */,
 				B537DC862632D90E003D1E8B /* Assets.xcassets */,
 				B537DC882632D90E003D1E8B /* LaunchScreen.storyboard */,
 				B537DC8B2632D90E003D1E8B /* Info.plist */,
+				B5B5F4742632E9F2000E04A1 /* Extensions.swift */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		B5B5F4592632E770000E04A1 /* TextFont */ = {
+			isa = PBXGroup;
+			children = (
+				B5B5F4642632E78C000E04A1 /* Lato-Black.ttf */,
+				B5B5F45C2632E78B000E04A1 /* Lato-Bold.ttf */,
+				B5B5F45D2632E78B000E04A1 /* Lato-Hairline.ttf */,
+				B5B5F4602632E78B000E04A1 /* Lato-Heavy.ttf */,
+				B5B5F4662632E78C000E04A1 /* Lato-Light.ttf */,
+				B5B5F45E2632E78B000E04A1 /* Lato-Medium.ttf */,
+				B5B5F4692632E78C000E04A1 /* Lato-Regular.ttf */,
+				B5B5F46A2632E78C000E04A1 /* Lato-Semibold.ttf */,
+				B5B5F45A2632E78B000E04A1 /* Lato-Thin.ttf */,
+			);
+			path = TextFont;
+			sourceTree = "<group>";
+		};
+		B5B5F46F2632E8FC000E04A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B537DC822632D90C003D1E8B /* ViewController.swift in Sources */,
 				B537DC7E2632D90C003D1E8B /* AppDelegate.swift in Sources */,
-				B537DC802632D90C003D1E8B /* SceneDelegate.swift in Sources */,
+				B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */,
+				B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = selinkaplan.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = selinkaplan.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
