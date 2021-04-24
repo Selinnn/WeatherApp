@@ -22,6 +22,7 @@
 		B554612E2633158E00AC8D9D /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F45A2632E78B000E04A1 /* Lato-Thin.ttf */; };
 		B5546133263318CB00AC8D9D /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546131263318CB00AC8D9D /* WeatherCell.swift */; };
 		B5546134263318CB00AC8D9D /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5546132263318CB00AC8D9D /* WeatherCell.xib */; };
+		B554613B263353DA00AC8D9D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554613A263353DA00AC8D9D /* Weather.swift */; };
 		B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */; };
 		B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4742632E9F2000E04A1 /* Extensions.swift */; };
 		B5B5F4792632F049000E04A1 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4782632F049000E04A1 /* WeatherViewController.swift */; };
@@ -36,6 +37,7 @@
 		B537DC8B2632D90E003D1E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5546131263318CB00AC8D9D /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		B5546132263318CB00AC8D9D /* WeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		B554613A263353DA00AC8D9D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		B5B5F45A2632E78B000E04A1 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		B5B5F45C2632E78B000E04A1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		B5B5F45D2632E78B000E04A1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
@@ -80,6 +82,9 @@
 		B537DC7C2632D90C003D1E8B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5546139263351DD00AC8D9D /* Service */,
+				B5546138263351D700AC8D9D /* Model */,
+				B5546137263351D000AC8D9D /* ViewModel */,
 				B5546130263318AD00AC8D9D /* View */,
 				B5B5F46F2632E8FC000E04A1 /* Controller */,
 				B5B5F4592632E770000E04A1 /* TextFont */,
@@ -100,6 +105,28 @@
 				B5546132263318CB00AC8D9D /* WeatherCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B5546137263351D000AC8D9D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B5546138263351D700AC8D9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B554613A263353DA00AC8D9D /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5546139263351DD00AC8D9D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		B5B5F4592632E770000E04A1 /* TextFont */ = {
@@ -211,6 +238,7 @@
 				B5B5F4792632F049000E04A1 /* WeatherViewController.swift in Sources */,
 				B5546133263318CB00AC8D9D /* WeatherCell.swift in Sources */,
 				B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */,
+				B554613B263353DA00AC8D9D /* Weather.swift in Sources */,
 				B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

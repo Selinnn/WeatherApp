@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController , CLLocationManagerDelegate{
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -15,11 +17,24 @@ class WeatherViewController: UIViewController {
         }
     }
     var apiKey = ""
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barStyle = .default
+        
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {return}
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
     
 }

@@ -19,6 +19,7 @@ class ApiKeyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         navigationController?.navigationBar.isHidden = true
     }
     
