@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import WeatherApp
 
 class WeatherAppTests: XCTestCase {
 
@@ -27,6 +28,14 @@ class WeatherAppTests: XCTestCase {
         measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testWeatherViewModel() {
+        let weather = WeatherModel(day: 1586468027, imgUrl: "", min: 0.0, max: 0.0)
+        let weatherViewModel = WeatherViewModel(weather)
+        
+        XCTAssertEqual(weather.day, weatherViewModel.day)
+     
     }
 
 }

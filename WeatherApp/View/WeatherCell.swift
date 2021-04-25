@@ -14,15 +14,23 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var minLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     
+    var weatherViewModel : WeatherViewModel! {
+        didSet {
+            daysLabel.text = getDays(date: weatherViewModel.day)
+            downloadImage(from: weatherViewModel.img, completion: {(img) in
+                self.weatherImg.image = img
+            })
+            minLabel.text = weatherViewModel.min
+            maxLabel.text = weatherViewModel.max
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     static func registerTo(tableView: UITableView?){
@@ -34,4 +42,26 @@ class WeatherCell: UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as! WeatherCell
         return cell
     }
+    
+    func getDays(date: Int) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(date))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let dayInWeek = dateFormatter.string(from: date)
+        return dayInWeek
+    }
+    
+   func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+     func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            DispatchQueue.main.async() {
+                completion(UIImage(data: data))
+            }
+        }
+        
+    }
+    
 }

@@ -25,6 +25,8 @@
 		B554613B263353DA00AC8D9D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554613A263353DA00AC8D9D /* Weather.swift */; };
 		B554613F26346C8A00AC8D9D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554613E26346C8A00AC8D9D /* APIRequest.swift */; };
 		B55461492634A77E00AC8D9D /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55461482634A77E00AC8D9D /* WeatherAppTests.swift */; };
+		B55461592635777200AC8D9D /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55461582635777200AC8D9D /* WeatherViewModel.swift */; };
+		B55461612635939B00AC8D9D /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55461602635939B00AC8D9D /* WeatherModel.swift */; };
 		B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4702632E985000E04A1 /* ApiKeyViewController.swift */; };
 		B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4742632E9F2000E04A1 /* Extensions.swift */; };
 		B5B5F4792632F049000E04A1 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F4782632F049000E04A1 /* WeatherViewController.swift */; };
@@ -54,6 +56,8 @@
 		B55461462634A77E00AC8D9D /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55461482634A77E00AC8D9D /* WeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppTests.swift; sourceTree = "<group>"; };
 		B554614A2634A77E00AC8D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55461582635777200AC8D9D /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		B55461602635939B00AC8D9D /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		B5B5F45A2632E78B000E04A1 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		B5B5F45C2632E78B000E04A1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		B5B5F45D2632E78B000E04A1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		B5546137263351D000AC8D9D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B55461582635777200AC8D9D /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				B554613A263353DA00AC8D9D /* Weather.swift */,
+				B55461602635939B00AC8D9D /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,7 +309,9 @@
 				B554613F26346C8A00AC8D9D /* APIRequest.swift in Sources */,
 				B5B5F4792632F049000E04A1 /* WeatherViewController.swift in Sources */,
 				B5546133263318CB00AC8D9D /* WeatherCell.swift in Sources */,
+				B55461612635939B00AC8D9D /* WeatherModel.swift in Sources */,
 				B5B5F4752632E9F2000E04A1 /* Extensions.swift in Sources */,
+				B55461592635777200AC8D9D /* WeatherViewModel.swift in Sources */,
 				B554613B263353DA00AC8D9D /* Weather.swift in Sources */,
 				B5B5F4712632E985000E04A1 /* ApiKeyViewController.swift in Sources */,
 			);

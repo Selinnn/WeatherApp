@@ -22,6 +22,7 @@ class WeatherViewController: UIViewController{
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var weather: Weather?
+    var weatherModels = [WeatherModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +39,21 @@ class WeatherViewController: UIViewController{
         self.currentTempLabel.text = "\(String(format: "%.0f", temp - 273.15))°"
     }
     
+    func createModel() {
+        for i in 1..<weather!.daily.count {
+            let weatherDay = weather!.daily[i]
+            weatherModels.append(WeatherModel(day: weatherDay.dt, imgUrl:"http://openweathermap.org/img/wn/\(weatherDay.weather.first!.icon)@2x.png", min: weatherDay.temp.min, max: weatherDay.temp.max))
+        }
+        self.tableView.reloadData()
+    }
+    
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() { [weak self] in
+            DispatchQueue.main.async() {
                 completion(UIImage(data: data))
             }
         }
@@ -62,21 +71,12 @@ class WeatherViewController: UIViewController{
                 self.weather = weather
                 DispatchQueue.main.async {
                     self.insertCurrent(code: weather.current.weather.first!.icon, timeZone: weather.timezone, temp: weather.current.temp)
-                    self.tableView.reloadData()
+                    self.createModel()
                 }
             case .failure(let error):
                 print("failure \(error)")
             }
         })
-    }
-    
-    func getDays(date: Int) -> String {
-        let date = Date(timeIntervalSince1970: TimeInterval(date))
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        let dayInWeek = dateFormatter.string(from: date)
-        
-        return dayInWeek
     }
     
 }
@@ -85,7 +85,7 @@ extension WeatherViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = weather?.daily.count {
-            return count
+            return count - 1
         }else {
             return 0
         }
@@ -93,18 +93,7 @@ extension WeatherViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = WeatherCell.dequeueFrom(tableView: tableView, indexPath: indexPath)
-        
-        if (weather?.daily.count)! > 0 {
-            let url = URL(string: "http://openweathermap.org/img/wn/\((self.weather?.daily[indexPath.row].weather.first?.icon)!)@2x.png")
-            downloadImage(from: url!, completion: { img in
-                cell.weatherImg.image = img
-            })
-            
-            cell.maxLabel.text = "\(String(format: "%.0f", (weather?.daily[indexPath.row].temp.max)! - 273.15))°"
-            cell.minLabel.text = "\(String(format: "%.0f", (weather?.daily[indexPath.row].temp.min)! - 273.15))°"
-            cell.daysLabel.text = getDays(date: weather!.daily[indexPath.row].dt)
-        }
-        
+        cell.weatherViewModel = WeatherViewModel(weatherModels[indexPath.row])
         return cell
     }
     
