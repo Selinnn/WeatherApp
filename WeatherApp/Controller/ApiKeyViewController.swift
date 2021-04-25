@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class ApiKeyViewController: UIViewController {
+class ApiKeyViewController: UIViewController , CLLocationManagerDelegate {
     
     @IBOutlet weak var apiTextField: UITextField! {
         didSet {
@@ -17,10 +19,36 @@ class ApiKeyViewController: UIViewController {
         }
     }
     
+    let locationManager = CLLocationManager()
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
+    var locationAllowed = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround() 
         navigationController?.navigationBar.isHidden = true
+        
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {return}
+        latitude = locValue.latitude
+        longitude = locValue.longitude
+        switch locationManager.authorizationStatus {
+            case .notDetermined, .restricted, .denied:
+               locationAllowed = false
+            case .authorizedAlways, .authorizedWhenInUse:
+                locationAllowed = true
+            @unknown default:
+            break
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,12 +57,19 @@ class ApiKeyViewController: UIViewController {
     }
     
     @IBAction func enterBtnClick(_ sender: Any) {
-        if let text = apiTextField.text, !text.isEmpty {
+        let trimmedString = apiTextField.text?.trimmingCharacters(in: .whitespaces)
+        if let text = trimmedString, !text.isEmpty && locationAllowed {
           if let vc = self.storyboard?.instantiateViewController(identifier: "WeatherViewContoller") as? WeatherViewController {
             vc.apiKey = text
+            vc.latitude = self.latitude
+            vc.longitude = self.longitude
             navigationController?.pushViewController(vc, animated: true)
             }
             
+        }else {
+            let alert = UIAlertController(title: "Error", message: "Invalid API Key or not allowed location.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 

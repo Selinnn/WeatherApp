@@ -38,20 +38,20 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherappicon" translatesAutoresizingMaskIntoConstraints="NO" id="Mib-Ah-yyr">
-                        <rect key="frame" x="287" y="15" width="25" height="25"/>
+                        <rect key="frame" x="260" y="10" width="35" height="35"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="4hO-5H-LQN"/>
-                            <constraint firstAttribute="width" constant="25" id="7LP-oO-Qbx"/>
+                            <constraint firstAttribute="height" constant="35" id="4hO-5H-LQN"/>
+                            <constraint firstAttribute="width" constant="35" id="7LP-oO-Qbx"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb6-rY-Fas">
-                        <rect key="frame" x="332" y="17.5" width="16" height="20"/>
+                        <rect key="frame" x="315" y="17.5" width="16" height="20"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                         <color key="textColor" red="0.27843137254901962" green="0.32156862745098036" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-Qs-xd1">
-                        <rect key="frame" x="368" y="17.5" width="16" height="20"/>
+                        <rect key="frame" x="351" y="17.5" width="16" height="20"/>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                         <color key="textColor" red="0.50588235294117645" green="0.56470588235294117" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -63,13 +63,13 @@
                     <constraint firstItem="Mib-Ah-yyr" firstAttribute="centerY" secondItem="qUn-iP-lta" secondAttribute="centerY" id="GD1-wz-tAI"/>
                     <constraint firstItem="xb6-rY-Fas" firstAttribute="centerY" secondItem="Mib-Ah-yyr" secondAttribute="centerY" id="IoP-0Z-yFD"/>
                     <constraint firstItem="0ba-cr-eS2" firstAttribute="leading" secondItem="VSK-ol-Ifh" secondAttribute="leading" constant="25" id="Jdm-7j-Qee"/>
-                    <constraint firstItem="KN4-Qs-xd1" firstAttribute="leading" secondItem="xb6-rY-Fas" secondAttribute="trailing" constant="20" id="Ljn-91-xhi"/>
                     <constraint firstAttribute="bottom" secondItem="0ba-cr-eS2" secondAttribute="bottom" id="TCz-36-V7p"/>
                     <constraint firstItem="KN4-Qs-xd1" firstAttribute="centerY" secondItem="Mib-Ah-yyr" secondAttribute="centerY" id="aii-4D-1VA"/>
                     <constraint firstItem="qUn-iP-lta" firstAttribute="centerY" secondItem="VSK-ol-Ifh" secondAttribute="centerY" id="cL6-UM-V9Z"/>
+                    <constraint firstItem="KN4-Qs-xd1" firstAttribute="leading" secondItem="xb6-rY-Fas" secondAttribute="trailing" constant="20" id="erQ-S3-p15"/>
+                    <constraint firstItem="xb6-rY-Fas" firstAttribute="leading" secondItem="Mib-Ah-yyr" secondAttribute="trailing" constant="20" id="l2h-fq-qzY"/>
+                    <constraint firstItem="Mib-Ah-yyr" firstAttribute="leading" secondItem="VSK-ol-Ifh" secondAttribute="leading" constant="260" id="mKt-bf-fK7"/>
                     <constraint firstAttribute="trailing" secondItem="0ba-cr-eS2" secondAttribute="trailing" constant="25" id="sly-M2-73w"/>
-                    <constraint firstAttribute="trailing" secondItem="KN4-Qs-xd1" secondAttribute="trailing" constant="30" id="uKh-bv-tSv"/>
-                    <constraint firstItem="xb6-rY-Fas" firstAttribute="leading" secondItem="Mib-Ah-yyr" secondAttribute="trailing" constant="20" id="wNz-S7-319"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
